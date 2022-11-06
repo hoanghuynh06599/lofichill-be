@@ -37,6 +37,7 @@ class AuthController {
                     await res.cookie('refreshToken', refreshToken, {
                         httpOnly: true,
                         secure: true,
+                        path: '/',
                         sameSite: 'None'
                     })
                     console.log('Cookie added!')
@@ -80,6 +81,7 @@ class AuthController {
                         await res.cookie('refreshToken', refreshToken, {
                             httpOnly: true,
                             secure: true, // Produc -> true
+                            path: '/',
                             sameSite: 'None'
                         })
                         console.log('Cookie added!')
@@ -113,6 +115,7 @@ class AuthController {
                 await res.cookie('refreshToken', newRefreshToken, {
                     httpOnly: true,
                     secure: true, // Produc -> true
+                    path: '/',
                     sameSite: 'None'
                 })
                 refreshTokens.push(newRefreshToken)
