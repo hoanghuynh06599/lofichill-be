@@ -115,7 +115,7 @@ class AuthController {
                 await res.cookie('refreshToken', newRefreshToken, {
                     httpOnly: true,
                     secure: true, // Produc -> true
-                    path: '/',
+                    path: '/', 
                     sameSite: 'None'
                 })
                 refreshTokens.push(newRefreshToken)
